@@ -27,7 +27,12 @@ export default function Dashboard() {
       <main className="dashboard-main container">
         <div className="dashboard-top">
           <h1 className="dashboard-title">Pull Requests</h1>
-          <button className="btn-primary">Connect Repository</button>
+          <button 
+            className="btn-primary" 
+            onClick={() => alert("Connecting a repository requires the CodeForge GitHub App to be installed on your GitHub account. For this demo, please manually insert a repository into the Supabase database.")}
+          >
+            Connect Repository
+          </button>
         </div>
 
         <div className="dashboard-empty-state">

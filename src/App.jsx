@@ -4,10 +4,12 @@ import Hero from './components/Hero'
 import Features from './components/Features'
 import Workflow from './components/Workflow'
 import SocialProof from './components/SocialProof'
+import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
+import Docs from './components/Docs'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function LandingPage() {
@@ -19,6 +21,7 @@ function LandingPage() {
         <Features />
         <Workflow />
         <SocialProof />
+        <Pricing />
         <CTA />
       </main>
       <Footer />
@@ -30,6 +33,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/docs" element={<Docs />} />
       <Route path="/login" element={<Login />} />
       <Route 
         path="/dashboard" 

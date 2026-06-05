@@ -35,7 +35,10 @@ export const AuthProvider = ({ children }) => {
         redirectTo: `${window.location.origin}/dashboard`
       }
     })
-    if (error) console.error("Error signing in:", error)
+    if (error) {
+      console.error("Error signing in:", error)
+      throw error
+    }
   }
 
   const signOut = async () => {

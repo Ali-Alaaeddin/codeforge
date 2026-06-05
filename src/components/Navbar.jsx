@@ -15,10 +15,10 @@ export default function Navbar() {
         </a>
 
         <nav className="navbar-nav" id="navbar-nav">
-          <a href="#features" className="navbar-link">Features</a>
-          <a href="#workflow" className="navbar-link">Workflow</a>
-          <a href="#pricing" className="navbar-link">Pricing</a>
-          <a href="https://docs.codeforge.dev" className="navbar-link" target="_blank" rel="noopener">Docs</a>
+          <a href="/#features" className="navbar-link">Features</a>
+          <a href="/#workflow" className="navbar-link">Workflow</a>
+          <a href="/#pricing" className="navbar-link">Pricing</a>
+          <Link to="/docs" className="navbar-link">Docs</Link>
         </nav>
 
         <div className="navbar-actions">

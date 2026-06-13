@@ -22,10 +22,9 @@ export default function Footer() {
 
           <div className="footer-col">
             <h4 className="footer-col-title mono">Product</h4>
-            <a href="#features" className="footer-link">Features</a>
-            <a href="#pricing" className="footer-link">Pricing</a>
-            <a href="#changelog" className="footer-link">Changelog</a>
-            <a href="#integrations" className="footer-link">Integrations</a>
+            <a href="/#features" className="footer-link">Features</a>
+            <a href="/#workflow" className="footer-link">Workflow</a>
+            <a href="/#cta-section" className="footer-link">Get Started</a>
           </div>
 
           <div className="footer-col">

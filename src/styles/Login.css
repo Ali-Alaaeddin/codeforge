@@ -13,7 +13,7 @@
 
 .login-box {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   padding: var(--space-8);
   background: var(--surface-1);
   border: 1px solid var(--border-subtle);
@@ -21,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .login-logo {
@@ -31,6 +32,11 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: var(--space-8);
+  transition: color var(--transition-fast);
+}
+
+.login-logo:hover {
+  color: var(--accent);
 }
 
 .login-title {
@@ -42,7 +48,38 @@
 
 .login-subtitle {
   font-size: var(--text-sm);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+.login-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--accent-muted);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  margin-bottom: var(--space-6);
+  width: 100%;
+  text-align: left;
+}
+
+.login-warning span {
+  font-size: var(--text-xs);
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+.login-warning svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.login-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
 }
 
 .btn-github {
@@ -51,19 +88,82 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
+  padding: var(--space-4) var(--space-5);
   background: var(--surface-2);
   color: var(--text-primary);
   border: 1px solid var(--border-default);
   font-size: var(--text-sm);
   font-weight: 500;
+  cursor: pointer;
   transition: all var(--transition-fast);
-  margin-bottom: var(--space-6);
 }
 
-.btn-github:hover {
+.btn-github:hover:not(:disabled) {
   background: var(--surface-3);
   border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.btn-guest {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-guest:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-guest:active, .btn-github:active {
+  transform: translateY(0);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  margin: var(--space-2) 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.login-divider:not(:empty)::before {
+  margin-right: var(--space-4);
+}
+
+.login-divider:not(:empty)::after {
+  margin-left: var(--space-4);
+}
+
+.login-error {
+  color: var(--red);
+  font-size: var(--text-xs);
+  margin-bottom: var(--space-4);
+  line-height: 1.4;
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3);
+  background: var(--red-muted);
+  border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
 .login-footer {
